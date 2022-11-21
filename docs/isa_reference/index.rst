@@ -7,5 +7,6 @@
    
    arithmetic/index
    load_store/index
+   compare/index
    branching/index
    system/index
