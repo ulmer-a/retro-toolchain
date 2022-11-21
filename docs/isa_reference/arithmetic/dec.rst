@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**DEC**: Decrement Register or Memory
 ---------------------------------------

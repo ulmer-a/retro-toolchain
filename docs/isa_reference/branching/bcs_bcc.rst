@@ -1,2 +1,2 @@
-BCS/BCC: Branch on carry flag
+**BCS/BCC**: Branch on carry flag
 ---------------------------------------

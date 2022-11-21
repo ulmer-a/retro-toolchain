@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**TSX/TXS**: Exchange X and S Registers
 ---------------------------------------

@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**PHP/PLP**: Push/Pop Status Register
 ---------------------------------------

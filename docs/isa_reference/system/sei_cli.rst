@@ -1,2 +1,2 @@
-SEI/CLI: Set/Clear interrupt flag
+**SEI/CLI**: Set/Clear interrupt flag
 ---------------------------------------

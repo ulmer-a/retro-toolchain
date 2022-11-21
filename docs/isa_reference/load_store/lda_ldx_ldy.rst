@@ -1,2 +1,2 @@
-LDA/LDX/LDY: Load Register from Memory
+**LDA/LDX/LDY**: Load Register from Memory
 ---------------------------------------

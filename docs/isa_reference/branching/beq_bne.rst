@@ -1,2 +1,2 @@
-BEQ/BNE: Branch on zero flag/equality 
+**BEQ/BNE**: Branch on zero flag/equality 
 ---------------------------------------

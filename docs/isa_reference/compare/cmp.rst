@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**CMP**: Compare Accumulator
 ---------------------------------------

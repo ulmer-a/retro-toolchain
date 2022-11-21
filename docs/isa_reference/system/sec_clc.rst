@@ -1,2 +1,2 @@
-SEC/CLC: Set/Clear carry flag
+**SEC/CLC**: Set/Clear carry flag
 ---------------------------------------

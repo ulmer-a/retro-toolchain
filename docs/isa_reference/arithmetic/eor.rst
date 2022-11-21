@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**EOR**: Bitwise exclusive OR (XOR)
 ---------------------------------------

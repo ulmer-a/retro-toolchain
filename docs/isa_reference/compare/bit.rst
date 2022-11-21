@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**BIT**: Bit Test
 ---------------------------------------

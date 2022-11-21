@@ -1,2 +1,2 @@
-RTI: Return from Interrupt
+**RTI**: Return from Interrupt
 ---------------------------------------

@@ -1,2 +1,2 @@
-BRA: Jump (PC-relative)
+**BRA**: Jump (PC-relative)
 ---------------------------------------

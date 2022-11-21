@@ -1,2 +1,2 @@
-STA/STX/STY: Store Register in Memory
+**STA/STX/STY**: Store Register in Memory
 ---------------------------------------

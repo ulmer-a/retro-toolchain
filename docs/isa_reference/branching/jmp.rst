@@ -1,2 +1,2 @@
-JMP: Jump to arbitrary address
+**JMP**: Jump to arbitrary address
 ---------------------------------------

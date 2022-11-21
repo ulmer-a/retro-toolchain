@@ -1,4 +1,4 @@
-BRK: Software interrupt
+**BRK**: Software interrupt
 ---------------------------------------
 
 Opcode: `0x00`

@@ -1,2 +1,2 @@
-BVS/BVC: Branch on overflow flag
+**BVS/BVC**: Branch on overflow flag
 ---------------------------------------

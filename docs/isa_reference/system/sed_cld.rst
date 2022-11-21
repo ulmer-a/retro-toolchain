@@ -1,2 +1,2 @@
-BCS/BCC: Set/Clear decimal flag
+**BCS/BCC**: Set/Clear decimal flag
 ---------------------------------------

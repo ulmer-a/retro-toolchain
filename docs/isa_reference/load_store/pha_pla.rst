@@ -1,2 +1,2 @@
-**RTS**: Return from Subroutine
+**PHA/PLA**: Push/Pop Accumulator
 ---------------------------------------

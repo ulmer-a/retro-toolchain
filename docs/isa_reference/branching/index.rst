@@ -3,7 +3,7 @@ Branching Instructions
 ----------------------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    jmp
    bra

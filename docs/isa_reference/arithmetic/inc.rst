@@ -1,6 +1,2 @@
-----------------------------------
-``INC`` Increment
-----------------------------------
-
-Increment instruction
-
+**INC**: Increment Register or Memory
+---------------------------------------
