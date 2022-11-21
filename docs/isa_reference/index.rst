@@ -6,4 +6,6 @@
    :maxdepth: 2
    
    arithmetic/index
-   system_ctrl/index
+   load_store/index
+   branching/index
+   system/index

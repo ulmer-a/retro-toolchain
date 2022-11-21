@@ -1,8 +1,9 @@
 ----------------------------------
-System Control Instructions
+Load/Store Instructions
 ----------------------------------
 
 .. toctree::
    :maxdepth: 2
    
-   brk
+   lda_ldx_ldy
+   sta_stx_sty
