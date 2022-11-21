@@ -1,4 +1,4 @@
-**BRK**: Software interrupt
+**BRK**: Breakpoint
 ---------------------------------------
 
 The ``BRK`` instruction triggers a software interrupt by first pushing the
