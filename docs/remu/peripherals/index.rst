@@ -4,7 +4,7 @@ Peripherals
 Available peripherals are:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    memory
    uart-virt

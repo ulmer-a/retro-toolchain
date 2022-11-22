@@ -1,4 +1,4 @@
-WDC 65C22 UART (ACIA)
+WDC 65C51 UART (ACIA)
 ---------------------
 
 Not yet implemented.

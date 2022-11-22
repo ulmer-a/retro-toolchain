@@ -15,7 +15,7 @@ attach to your SBC. This serves as an ideal development platform.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    installation
    usage

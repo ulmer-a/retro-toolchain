@@ -18,8 +18,69 @@ possible.
      - Control Register
 
 
-Example
-~~~~~~~
+Data Register
+~~~~~~~~~~~~~~
+
+The UART data register is located at offset 0x00 from the peripheral's
+base address. Read from this register to receive the next byte from the
+receive buffer. Write to this register to transmit a byte.
+
+Both the receive and transmit buffers are guaranteed to hold **at least
+256 bytes** before they overflow and potentially overwrite previous data.
+A full transmit buffer is indicated by bit 2 (**F**) in the status register.
+
+.. warning::
+
+    Reading from the data register is undefined behaviour if the **A**-bit
+    (bit 0) in the status register is zero.
+
+
+Status Register
+~~~~~~~~~~~~~~~
+
+The UART status register is located at offset 0x01 (read) from the
+peripheral's base address and has the following layout:
+
+.. code-block:: txt
+
+      7   6   5               1   0
+    +---+---+-------------------+---+
+    | I | A |    Reserved       | F |
+    +---+---+-------------------+---+
+
+* Bit 0 (**F**): *TX Buffer Full*. This bit is going to be set to 1 if and only
+  if the transmit buffer is full. Writing to the data register when this is 1 may
+  overwrite previous data in the transmit buffer.
+* Bit 1-5: *Reserved*.
+* Bit 6 (**A**): *RX Data Available*. This bit is going to be set to 1 if and
+  only if there is data to be read from the receive buffer.
+* Bit 7 (**I**): *Interrupt condition*. This bit is 1 if the device has asserted
+  an interrupt. Check this flag in your interrupt handler to see whether the
+  interrupt came from this device. Reading the status register clears this bit.
+
+
+Control Register
+~~~~~~~~~~~~~~~~
+
+The UART control register is located at offset 0x01 (write) from the
+peripheral's base address and has the following layout:
+
+.. code-block:: txt
+
+      7                       1    0
+    +-----------------------+---+----+
+    |        Reserved       | E | RI |
+    +-----------------------+---+----+
+
+* Bit 0 (**I**): *RX Interrupt Enable*. Set to 1 to generate an interrupt
+  whenever a data byte becomes available at the RX data register.
+* Bit 1 (**E**): *Echo Mode Enable*. Setting this to 1 will feed every
+  transmitted character back into the receiver.
+* Bit 2-7: *Reserved*.
+
+
+Example Code
+~~~~~~~~~~~~
 
 The following example prints *Hello, world!* to the serial port by repeatedly
 writing the UART data register.
@@ -44,65 +105,3 @@ writing the UART data register.
 
     hello_world:
         .byte "Hello, world!", 0a, 00
-
-
-Data Register
-~~~~~~~~~~~~~~
-
-The UART data register is located at offset 0x00 from the peripheral's
-base address. Read from this register to receive the next byte from the
-receive buffer. Write to this register to transmit a byte.
-
-Both the receive and transmit buffers are guaranteed to hold **at least
-256 bytes** before they overflow and potentially overwrite previous data.
-A full transmit buffer is indicated by bit 2 (**F**) in the status register.
-
-.. warning::
-
-    Reading from the data register is undefined behaviour if the **A**-bit
-    (bit 0) in the status register is zero.
-
-
-Status Register
-~~~~~~~~~~~~~~~
-
-The UART status register is located at offset 0x0001 (read) from the
-peripheral's base address and has the following layout:
-
-.. code-block: txt
-
-    [ Virt UART Status Register (Offset )]
-
-      7                       1   0
-    +-----------------------+---+---+
-    |        Reserved       | F | A |
-    +-----------------------+---+---+
-
-* Bit 0 (**A**): *RX Data Available*. This bit is going to be set to 1 if and
-only if there is data to be read from the receive buffer.
-* Bit 1 (**F**): *TX Buffer Full*. This bit is going to be set to 1 if and only
-if the transmit buffer is full. Writing to the data register when this is 1 may
-overwrite previous data in the transmit buffer.
-* Bit 2-7: *Reserved*.
-
-
-Control Register
-~~~~~~~~~~~~~~~~
-
-The UART control register is located at offset 0x0001 (write) from the
-peripheral's base address and has the following layout:
-
-.. code-block: txt
-
-    [ Virt UART Status Register (Offset )]
-
-      7                       1    0
-    +-----------------------+---+----+
-    |        Reserved       | E | RI |
-    +-----------------------+---+----+
-
-* Bit 0 (**I**): *RX Interrupt Enable*. Set to 1 to generate an interrupt
-whenever a data byte becomes available at the RX data register.
-* Bit 1 (**E**): *Echo Mode Enable*. Setting this to 1 will feed every
-transmitted character back into the receiver.
-* Bit 2-7: *Reserved*.
