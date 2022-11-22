@@ -13,25 +13,23 @@ instruction can be used to return from the interrupt.
      - Opcode
      - Cycles
      - Affected Flags
-   * - BRK
+   * - ``BRK``
      - 0x00
      - 7
      - **I = 1**, **D = 0** [1]_
 
-The BRK vector is located at 0xfffe-0xffff.
+The BRK vector is shared with the maskable interrupt vector and
+located at 0xfffe-0xffff. Use the *BRK flag* (see note below) to
+distinguish between breakpoints and interrupts.
 
 Usage
 ~~~~~
 
-The BRK instruction can be used to trigger a system calls to a kernel or
-within a debugger to implement breakpoints.
+The BRK instruction can be used to implement breakpoints within a debugger or
+to trigger system calls to a kernel. Some systems also use it to raise errors.
 
-Some systems also use it to raise an error. In that case the byte immediately
-following the BRK instruction can be used to report an error number, since it
-is usually skipped (see below).
-
-Execution semantics
-~~~~~~~~~~~~~~~~~~~
+Detailed Execution semantics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The BRK instruction will set the interrupt flag in the processor status register
 to to one, disabling any further interrupts (except non-maskable interrupts which
@@ -50,7 +48,7 @@ will always be executed).
    to the interrupt handling routine, for example, to encode a system call number.
 
 Interrupt Stack Layout
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 After the BRK instruction has been executed, the stack contains the program
 counter (in little endian order) and status register.
