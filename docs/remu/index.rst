@@ -20,3 +20,4 @@ attach to your SBC. This serves as an ideal development platform.
    installation
    usage
    device_tree_format
+   peripherals/index

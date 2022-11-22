@@ -28,6 +28,7 @@ code. Just write to it's memory location to print a character.
             },
             {
                 "type": "rom",
+                "name": "rom0",
                 "addr": "0xE000",
                 "size": "8192"
             }
