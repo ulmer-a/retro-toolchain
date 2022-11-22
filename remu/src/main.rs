@@ -14,7 +14,7 @@ fn main() {
             hardware::MemoryDevice::rom(0x0000, 8192, "test.txt").unwrap(),
         ));
 
-    let mut cpu = Cpu::new(&system);
+    let mut cpu = Cpu::new(&system, true);
 
     loop {
         cpu.step();
