@@ -13,4 +13,5 @@ set.
    :caption: Contents:
 
    Home <self>
+   remu/index
    isa_reference/index
