@@ -1,0 +1,24 @@
+{
+    "name": "65C02 Virt Machine",
+    "vendor": "Alexander Ulmer",
+    "description": "Generic 65c02 board with 32k RAM, 32k ROM and debug console",
+    "cpu": "65c02",
+    "memory": [
+        {
+            "type": "ram",
+            "addr": "0x0000",
+            "size": "0xc000"
+        },
+        {
+            "type": "rom",
+            "addr": "0xc000",
+            "size": "0x4000"
+        }
+    ],
+    "peripherals": [
+        {
+            "type": "uart-virt",
+            "addr": "0xdfd0"
+        }
+    ]
+}

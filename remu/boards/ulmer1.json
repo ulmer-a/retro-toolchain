@@ -1,0 +1,32 @@
+{
+    "name": "Ulmer 65C02 SBC Board",
+    "vendor": "Alexander Ulmer",
+    "description": "65c02 board with 32k RAM, 8k ROM, ACIA and VIA",
+    "cpu": "65c02",
+    "memory": [
+        {
+            "type": "ram",
+            "addr": "0x0000",
+            "size": "0x8000"
+        },
+        {
+            "type": "rom",
+            "addr": "0xe000",
+            "size": "8192"
+        }
+    ],
+    "peripherals": [
+        {
+            "type": "debugcon",
+            "addr": "0xdfd0"
+        },
+        {
+            "type": "uart-65c51",
+            "addr": "0xdfe0"
+        },
+        {
+            "type": "via-65c22",
+            "addr": "0xdff0"
+        }
+    ]
+}

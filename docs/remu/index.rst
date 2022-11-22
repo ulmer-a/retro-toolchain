@@ -1,5 +1,5 @@
 ----------------------------------
-REMU 6502/65C02 SBC Emulator
+REMU SBC Emulator
 ----------------------------------
 
 The **Retro Emulator** (REMU) is a highly configurable SBC emulator. It supports
